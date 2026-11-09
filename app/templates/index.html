@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+  {% if student %}
+    <h1>Welcome, {{ student.full_name }}</h1>
+  {% else %}
+    <h1>Student System</h1>
+    <a href="{{ url_for('main.register') }}">Register</a>
+    <a href="{{ url_for('main.login') }}">Log in</a>
+  {% endif %}
+{% endblock %}
